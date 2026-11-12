@@ -5,15 +5,15 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#0b0d10" name="theme-color"/>
-<meta content="HANMOTORS — автосервис в Таллинне. Ремонт, диагностика, шиномонтаж, цены на работы и условия стоянки. Heli tänav 10, телефон +372 5777 0099." name="description"/>
+<meta content="HANMOTORS — автосервис в Таллинне. Ремонт, диагностика, шиномонтаж, цены на работы и условия стоянки. Heli tänav 10, телефон +372 5777 0099." data-i18n-content="meta.description" name="description"/>
 <title>HANMOTORS — Автосервис и шиномонтаж в Таллинне</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link as="image" href="assets/img/repair.webp" rel="preload"/>
 <link href="css/main.css" rel="stylesheet"/>
-<script defer="" src="js/main.js"></script>
-<link href="assets/img/hanmotors-symbol.png" rel="icon" type="image/png"/></head>
+<script defer="" src="js/i18n.js"></script><script defer="" src="js/main.js"></script>
+<link href="assets/img/hanmotors-symbol.png" rel="icon" type="image/png"/><script defer="" src="js/booking.js"></script></head>
 <body>
 <svg aria-hidden="true" class="sr-only" xmlns="http://www.w3.org/2000/svg">
 <symbol id="icon-arrow" viewbox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path></symbol>
@@ -29,129 +29,161 @@
 </svg>
 <header class="site-header" id="site-header">
 <div class="shell header-inner">
-<a aria-label="HANMOTORS — на главную" class="brand" href="#home"><img alt="HANMOTORS — Your Best Choice" class="brand-logo" height="438" src="assets/img/hanmotors-logo.png" width="875"/></a>
-<nav aria-label="Главное меню" class="main-nav" id="main-nav">
-<a class="is-active" href="#home">Главная</a>
-<a href="#services">Услуги</a>
-<a href="#prices">Цены</a>
-<a href="#parking">Стоянка</a>
-<a href="#contacts">Контакты</a>
+<a aria-label="HANMOTORS — на главную" class="brand" data-i18n-aria-label="brand.aria" href="#home"><img alt="HANMOTORS — Your Best Choice" class="brand-logo" height="438" src="assets/img/hanmotors-logo.png" width="875"/></a>
+<nav aria-label="Главное меню" class="main-nav" data-i18n-aria-label="nav.aria" id="main-nav">
+<a class="is-active" data-i18n="nav.home" href="#home">Главная</a>
+<a data-i18n="nav.services" href="#services">Услуги</a>
+<a data-i18n="nav.prices" href="#prices">Цены</a>
+<a data-i18n="nav.parking" href="#parking">Стоянка</a>
+<a data-i18n="nav.booking" href="#booking">Запись</a><a data-i18n="nav.contacts" href="#contacts">Контакты</a>
 </nav>
-<a class="header-phone" href="tel:+37257770099"><svg><use href="#icon-phone"></use></svg><span>+372 5777 0099</span></a>
-<button aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" id="menu-toggle" type="button"><span></span><span></span><span></span></button>
+<div aria-label="Выбор языка" class="lang-switch" data-i18n-aria-label="language.name" role="group"><button aria-label="Русский" aria-pressed="true" class="lang-btn is-active" data-lang="ru" lang="ru" title="Русский" type="button">RU</button><button aria-label="Eesti" aria-pressed="false" class="lang-btn" data-lang="et" lang="et" title="Eesti" type="button">ET</button><button aria-label="English" aria-pressed="false" class="lang-btn" data-lang="en" lang="en" title="English" type="button">EN</button></div><a class="header-phone" href="tel:+37257770099"><svg><use href="#icon-phone"></use></svg><span>+372 5777 0099</span></a>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" data-i18n-aria-label="menu.label" id="menu-toggle" type="button"><span></span><span></span><span></span></button>
 </div>
 </header>
 <main>
 <section aria-labelledby="hero-title" class="hero" id="home">
 <div class="shell hero-layout">
 <div class="hero-copy">
-<div class="eyebrow"><i></i> АВТОСЕРВИС В ТАЛЛИНЕ</div>
-<h1 id="hero-title">ПОЛНЫЙ<br/>СЕРВИС<br/>ВАШЕГО<br/><em>АВТОМОБИЛЯ</em></h1>
-<p>Диагностика, ремонт, шиномонтаж и обслуживание автомобилей. Внимание к деталям и уверенность на каждом километре.</p>
+<div class="eyebrow" data-i18n-html="hero.eyebrow"><i></i> АВТОСЕРВИС В ТАЛЛИНЕ</div>
+<h1 data-i18n-html="hero.title" id="hero-title">ПОЛНЫЙ<br/>СЕРВИС<br/>ВАШЕГО<br/><em>АВТОМОБИЛЯ</em></h1>
+<p data-i18n="hero.body">Диагностика, ремонт, шиномонтаж и обслуживание автомобилей. Внимание к деталям и уверенность на каждом километре.</p>
 <div class="hero-actions">
-<a class="btn btn-red" href="#prices">Цены <svg><use href="#icon-arrow"></use></svg></a>
-<a class="btn btn-ghost" href="#contacts">Записаться на обслуживание <svg><use href="#icon-arrow"></use></svg></a>
+<a class="btn btn-red" href="#prices"><span data-i18n="hero.prices">Цены</span><svg><use href="#icon-arrow"></use></svg></a>
+<a class="btn btn-ghost" href="#booking"><span data-i18n="hero.book">Записаться на обслуживание</span><svg><use href="#icon-arrow"></use></svg></a>
 </div>
 <div class="hero-bottom"><span class="hero-small-dot"></span> Heli tänav 10 <span class="separator">/</span> Tallinn, Estonia</div>
 </div>
 <div class="hero-visual">
-<img alt="Механик осматривает автомобиль на подъёмнике — иллюстрация услуг" fetchpriority="high" height="887" src="assets/img/repair.webp" width="591"/>
+<img alt="Механик осматривает автомобиль на подъёмнике — иллюстрация услуг" data-i18n-alt="hero.img" fetchpriority="high" height="887" src="assets/img/repair.webp" width="591"/>
 <div class="photo-caption"><span>PRECISION / PERFORMANCE / PASSION</span><b>01 — HANMOTORS</b></div>
 <div aria-hidden="true" class="hero-outline-number">01</div>
 </div>
 </div>
 <div aria-hidden="true" class="hero-grid"></div>
 </section>
-<div aria-label="Марки автомобилей" class="brands"><div class="shell brands-inner"><span class="brands-label">РАБОТАЕМ<br/>С МАРКАМИ</span><div class="brand-list"><span>AUDI</span><span>BMW</span><span>MERCEDES</span><span>VOLKSWAGEN</span><span>ŠKODA</span><span>PORSCHE</span><span>И ДРУГИЕ</span></div></div></div>
+<div aria-label="Марки автомобилей" class="brands"><div class="shell brands-inner"><span class="brands-label" data-i18n-html="brands.label">РАБОТАЕМ<br/>С МАРКАМИ</span><div class="brand-list"><span>AUDI</span><span>BMW</span><span>MERCEDES</span><span>VOLKSWAGEN</span><span>ŠKODA</span><span>PORSCHE</span><span data-i18n="brands.other">И ДРУГИЕ</span></div></div></div>
 <section aria-labelledby="services-title" class="section services-section" id="services">
 <div class="shell">
-<div class="section-heading"><div><div class="section-kicker">01 / НАПРАВЛЕНИЯ</div><h2 id="services-title">НАШИ <em>УСЛУГИ</em></h2></div><p>От сезонной смены шин до ремонта двигателя. Выберите нужное направление и ознакомьтесь с тарифами.</p></div>
+<div class="section-heading"><div><div class="section-kicker" data-i18n="services.kicker">01 / НАПРАВЛЕНИЯ</div><h2 data-i18n-html="services.title" id="services-title">НАШИ <em>УСЛУГИ</em></h2></div><p data-i18n="services.intro">От сезонной смены шин до ремонта двигателя. Выберите нужное направление и ознакомьтесь с тарифами.</p></div>
 <div class="service-cards">
 <a class="service-card" href="#tire-prices">
-<div class="service-image"><img alt="Мастер выполняет шиномонтаж колеса" height="887" loading="lazy" src="assets/img/tires.webp" width="591"/><span class="service-num">01 / 03</span></div>
-<div class="service-card-body"><div><span class="card-overline">КОЛЁСА И ШИНЫ</span><h3>ШИНОМОНТАЖ</h3><p>Полный шиномонтаж для легковых автомобилей, внедорожников и фургонов.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
+<div class="service-image"><img alt="Мастер выполняет шиномонтаж колеса" data-i18n-alt="service1.img" height="887" loading="lazy" src="assets/img/tires.webp" width="591"/><span class="service-num">01 / 03</span></div>
+<div class="service-card-body"><div><span class="card-overline" data-i18n="service1.eyebrow">КОЛЁСА И ШИНЫ</span><h3 data-i18n="service1.title">ШИНОМОНТАЖ</h3><p data-i18n="service1.body">Полный шиномонтаж для легковых автомобилей, внедорожников и фургонов.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
 </a>
 <a class="service-card" href="#repair-prices">
-<div class="service-image"><img alt="Механик работает с автомобилем на подъёмнике" height="887" loading="lazy" src="assets/img/repair.webp" width="591"/><span class="service-num">02 / 03</span></div>
-<div class="service-card-body"><div><span class="card-overline">ОБСЛУЖИВАНИЕ И РЕМОНТ</span><h3>РЕМОНТ АВТО</h3><p>Ремонт легковых автомобилей, внедорожников, фургонов и двигателя.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
+<div class="service-image"><img alt="Механик работает с автомобилем на подъёмнике" data-i18n-alt="service2.img" height="887" loading="lazy" src="assets/img/repair.webp" width="591"/><span class="service-num">02 / 03</span></div>
+<div class="service-card-body"><div><span class="card-overline" data-i18n="service2.eyebrow">ОБСЛУЖИВАНИЕ И РЕМОНТ</span><h3 data-i18n="service2.title">РЕМОНТ АВТО</h3><p data-i18n="service2.body">Ремонт легковых автомобилей, внедорожников, фургонов и двигателя.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
 </a>
 <a class="service-card" href="#contacts">
-<div class="service-image"><img alt="Проверка автомобиля на подъёмнике — иллюстрация ходовой части" height="887" loading="lazy" src="assets/img/repair.webp" width="591"/><span class="service-num">03 / 03</span></div>
-<div class="service-card-body"><div><span class="card-overline">ПОДВЕСКА И ХОДОВАЯ</span><h3>ХОДОВАЯ ЧАСТЬ</h3><p>Ремонт и диагностика подвески.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
+<div class="service-image"><img alt="Проверка автомобиля на подъёмнике — иллюстрация ходовой части" data-i18n-alt="service3.img" height="887" loading="lazy" src="assets/img/repair.webp" width="591"/><span class="service-num">03 / 03</span></div>
+<div class="service-card-body"><div><span class="card-overline" data-i18n="service3.eyebrow">ПОДВЕСКА И ХОДОВАЯ</span><h3 data-i18n="service3.title">ХОДОВАЯ ЧАСТЬ</h3><p data-i18n="service3.body">Ремонт и диагностика подвески.</p></div><span class="circle-arrow"><svg><use href="#icon-arrow"></use></svg></span></div>
 </a>
 </div>
 <div aria-labelledby="addons-title" class="service-addons">
-<div class="addons-intro"><span class="section-kicker">ДРУГИЕ НАПРАВЛЕНИЯ</span><h3 id="addons-title">ЧТО ЕЩЁ <em>МЫ ДЕЛАЕМ</em></h3></div>
+<div class="addons-intro"><span class="section-kicker" data-i18n="addons.kicker">ДРУГИЕ НАПРАВЛЕНИЯ</span><h3 data-i18n-html="addons.title" id="addons-title">ЧТО ЕЩЁ <em>МЫ ДЕЛАЕМ</em></h3></div>
 <div class="addons-grid">
 <article class="addon-card">
-<div class="addon-photo"><img alt="Автомобиль и элементы колёс в ремонтной зоне — иллюстрация" loading="lazy" src="assets/img/workshop.webp"/></div>
-<div class="addon-copy"><span>04 / ТОРМОЗНАЯ СИСТЕМА</span><h4>Тормозная система</h4><p>Комплексное обслуживание и ремонт всех компонентов тормозной системы.</p></div>
+<div class="addon-photo"><img alt="Автомобиль и элементы колёс в ремонтной зоне — иллюстрация" data-i18n-alt="addon1.img" loading="lazy" src="assets/img/workshop.webp"/></div>
+<div class="addon-copy"><span data-i18n="addon1.kicker">04 / ТОРМОЗНАЯ СИСТЕМА</span><h4 data-i18n="addon1.title">Тормозная система</h4><p data-i18n="addon1.body">Комплексное обслуживание и ремонт всех компонентов тормозной системы.</p></div>
 </article>
 <article class="addon-card">
-<div class="addon-photo"><img alt="Работы под днищем автомобиля на подъёмнике — иллюстрация" loading="lazy" src="assets/img/repair.webp"/></div>
-<div class="addon-copy"><span>05 / ЗАЩИТА КУЗОВА</span><h4>Антикоррозийная обработка</h4><p>Зачистка и защита днища.</p></div>
+<div class="addon-photo"><img alt="Работы под днищем автомобиля на подъёмнике — иллюстрация" data-i18n-alt="addon2.img" loading="lazy" src="assets/img/repair.webp"/></div>
+<div class="addon-copy"><span data-i18n="addon2.kicker">05 / ЗАЩИТА КУЗОВА</span><h4 data-i18n="addon2.title">Антикоррозийная обработка</h4><p data-i18n="addon2.body">Зачистка и защита днища.</p></div>
 </article>
 <article class="addon-card">
-<div class="addon-photo"><img alt="Передняя часть автомобиля с фарами — иллюстрация" loading="lazy" src="assets/img/workshop.webp"/></div>
-<div class="addon-copy"><span>06 / ОПТИКА</span><h4>Фары</h4><p>Полировка фар, покраска масок.</p></div>
+<div class="addon-photo"><img alt="Передняя часть автомобиля с фарами — иллюстрация" data-i18n-alt="addon3.img" loading="lazy" src="assets/img/workshop.webp"/></div>
+<div class="addon-copy"><span data-i18n="addon3.kicker">06 / ОПТИКА</span><h4 data-i18n="addon3.title">Фары</h4><p data-i18n="addon3.body">Полировка фар, покраска масок.</p></div>
 </article>
 <article class="addon-card">
-<div class="addon-photo"><img alt="Работа с автомобильной электроникой — иллюстрация" loading="lazy" src="assets/img/diagnostics.webp"/></div>
-<div class="addon-copy"><span>07 / ОСНАЩЕНИЕ</span><h4>Дополнительное оборудование</h4><p>Фаркоп, парктроники, камеры и т. д.</p></div>
+<div class="addon-photo"><img alt="Работа с автомобильной электроникой — иллюстрация" data-i18n-alt="addon4.img" loading="lazy" src="assets/img/diagnostics.webp"/></div>
+<div class="addon-copy"><span data-i18n="addon4.kicker">07 / ОСНАЩЕНИЕ</span><h4 data-i18n="addon4.title">Дополнительное оборудование</h4><p data-i18n="addon4.body">Фаркоп, парктроники, камеры и т. д.</p></div>
 </article>
 </div>
 </div>
-
-<p class="photos-note">* Изображения в этом разделе — иллюстративные, не фотографии конкретного сервиса HANMOTORS.</p>
+<p class="photos-note" data-i18n="services.photosnote">* Изображения в этом разделе — иллюстративные, не фотографии конкретного сервиса HANMOTORS.</p>
 <div class="advantages">
-<div class="advantage"><svg><use href="#icon-gear"></use></svg><div><b>Современный подход</b><span>Диагностика и обслуживание</span></div></div>
-<div class="advantage"><svg><use href="#icon-shield"></use></svg><div><b>Внимание к качеству</b><span>Ответственное выполнение работ</span></div></div>
-<div class="advantage"><svg><use href="#icon-tools"></use></svg><div><b>Комплексный сервис</b><span>Работы для разных типов авто</span></div></div>
+<div class="advantage"><svg><use href="#icon-gear"></use></svg><div><b data-i18n="adv1.title">Современный подход</b><span data-i18n="adv1.body">Диагностика и обслуживание</span></div></div>
+<div class="advantage"><svg><use href="#icon-shield"></use></svg><div><b data-i18n="adv2.title">Внимание к качеству</b><span data-i18n="adv2.body">Ответственное выполнение работ</span></div></div>
+<div class="advantage"><svg><use href="#icon-tools"></use></svg><div><b data-i18n="adv3.title">Комплексный сервис</b><span data-i18n="adv3.body">Работы для разных типов авто</span></div></div>
 </div>
 </div>
 </section>
 <section aria-labelledby="prices-title" class="section prices-section" id="prices">
 <div class="shell">
-<div class="section-heading"><div><div class="section-kicker">02 / ПРАЙС-ЛИСТ</div><h2 id="prices-title">НАШИ <em>ЦЕНЫ</em></h2></div><p>Стоимость работ указана ориентировочно. Окончательная сумма будет определена после осмотра автомобиля.</p></div>
+<div class="section-heading"><div><div class="section-kicker" data-i18n="prices.kicker">02 / ПРАЙС-ЛИСТ</div><h2 data-i18n-html="prices.title" id="prices-title">НАШИ <em>ЦЕНЫ</em></h2></div><p data-i18n="prices.intro">Стоимость работ указана ориентировочно. Окончательная сумма будет определена после осмотра автомобиля.</p></div>
 <div class="pricing-block" id="tire-prices">
-<div class="pricing-block-head"><div class="heading-with-icon"><div class="section-icon"><svg><use href="#icon-wheel"></use></svg></div><div><span class="small-overline">РАЗДЕЛ 01</span><h3>ШИНОМОНТАЖ</h3></div></div><span class="pricing-tag">ЦЕНЫ В €</span></div>
-<div aria-label="Цены на шиномонтаж по размеру дисков" class="table-scroll" role="region" tabindex="0">
+<div class="pricing-block-head"><div class="heading-with-icon"><div class="section-icon"><svg><use href="#icon-wheel"></use></svg></div><div><span class="small-overline" data-i18n="tires.kicker">РАЗДЕЛ 01</span><h3 data-i18n="tires.title">ШИНОМОНТАЖ</h3></div></div><span class="pricing-tag" data-i18n="tires.currency">ЦЕНЫ В €</span></div>
+<div aria-label="Цены на шиномонтаж по размеру дисков" class="table-scroll" data-i18n-aria-label="tires.tablearia" role="region" tabindex="0">
 <table class="tire-table">
-<thead><tr><th scope="col">Услуга</th><th scope="col">16″</th><th scope="col">17″</th><th scope="col">18–19″</th><th scope="col">21″</th></tr></thead>
+<thead><tr><th data-i18n="tires.column" scope="col">Услуга</th><th scope="col">16″</th><th scope="col">17″</th><th scope="col">18–19″</th><th scope="col">21″</th></tr></thead>
 <tbody>
-<tr class="group-row"><th colspan="5" scope="colgroup">ЛЕГКОВОЙ АВТОМОБИЛЬ</th></tr>
-<tr><th scope="row">Полный шиномонтаж <span>4 колеса</span></th><td>55 €</td><td>59 €</td><td>65 €</td><td>75 €</td></tr>
-<tr><th scope="row">Полный шиномонтаж <span>1 колесо</span></th><td>15 €</td><td>17 €</td><td>19 €</td><td>21 €</td></tr>
-<tr class="group-row"><th colspan="5" scope="colgroup">ВНЕДОРОЖНИК / ФУРГОН</th></tr>
-<tr><th scope="row">Полный шиномонтаж <span>4 колеса</span></th><td>65 €</td><td>69 €</td><td>75 €</td><td>85 €</td></tr>
-<tr><th scope="row">Полный шиномонтаж <span>1 колесо</span></th><td>17 €</td><td>19 €</td><td>21 €</td><td>23 €</td></tr>
+<tr class="group-row"><th colspan="5" data-i18n="tires.car" scope="colgroup">ЛЕГКОВОЙ АВТОМОБИЛЬ</th></tr>
+<tr><th data-i18n-html="tires.row1" scope="row">Полный шиномонтаж <span>4 колеса</span></th><td>55 €</td><td>59 €</td><td>65 €</td><td>75 €</td></tr>
+<tr><th data-i18n-html="tires.row2" scope="row">Полный шиномонтаж <span>1 колесо</span></th><td>15 €</td><td>17 €</td><td>19 €</td><td>21 €</td></tr>
+<tr class="group-row"><th colspan="5" data-i18n="tires.suv" scope="colgroup">ВНЕДОРОЖНИК / ФУРГОН</th></tr>
+<tr><th data-i18n-html="tires.row3" scope="row">Полный шиномонтаж <span>4 колеса</span></th><td>65 €</td><td>69 €</td><td>75 €</td><td>85 €</td></tr>
+<tr><th data-i18n-html="tires.row4" scope="row">Полный шиномонтаж <span>1 колесо</span></th><td>17 €</td><td>19 €</td><td>21 €</td><td>23 €</td></tr>
 </tbody>
 </table>
 </div>
-<p class="scroll-hint">На узком экране таблицу можно прокручивать в сторону <span aria-hidden="true">↔</span></p>
+<p class="scroll-hint" data-i18n-html="tires.scroll">На узком экране таблицу можно прокручивать в сторону <span aria-hidden="true">↔</span></p>
 </div>
 <div class="pricing-block repair-block" id="repair-prices">
-<div class="pricing-block-head"><div class="heading-with-icon"><div class="section-icon"><svg><use href="#icon-tools"></use></svg></div><div><span class="small-overline">РАЗДЕЛ 02</span><h3>РЕМОНТНЫЕ РАБОТЫ</h3></div></div><span class="pricing-tag">ЦЕНЫ В €</span></div>
+<div class="pricing-block-head"><div class="heading-with-icon"><div class="section-icon"><svg><use href="#icon-tools"></use></svg></div><div><span class="small-overline" data-i18n="repair.kicker">РАЗДЕЛ 02</span><h3 data-i18n="repair.title">РЕМОНТНЫЕ РАБОТЫ</h3></div></div><span class="pricing-tag" data-i18n="repair.currency">ЦЕНЫ В €</span></div>
 <div class="repair-list">
-<div class="repair-item"><span class="repair-index">01</span><span class="repair-name">Ремонт легкового автомобиля</span><strong>40 €</strong></div>
-<div class="repair-item"><span class="repair-index">02</span><span class="repair-name">Ремонт внедорожника / фургона</span><strong>50 €</strong></div>
-<div class="repair-item"><span class="repair-index">03</span><span class="repair-name">Чтение и удаление кодов ошибок</span><strong>25 €</strong></div>
-<div class="repair-item"><span class="repair-index">04</span><span class="repair-name">Сварочные работы</span><strong>40 €</strong></div>
-<div class="repair-item"><span class="repair-index">05</span><span class="repair-name">Проверка ходовой</span><strong>20 €</strong></div>
-<div class="repair-item"><span class="repair-index">06</span><span class="repair-name">Ремонт двигателя</span><strong>50 €</strong></div>
+<div class="repair-item"><span class="repair-index">01</span><span class="repair-name" data-i18n="repair.item1">Ремонт легкового автомобиля</span><strong>40 €</strong></div>
+<div class="repair-item"><span class="repair-index">02</span><span class="repair-name" data-i18n="repair.item2">Ремонт внедорожника / фургона</span><strong>50 €</strong></div>
+<div class="repair-item"><span class="repair-index">03</span><span class="repair-name" data-i18n="repair.item3">Чтение и удаление кодов ошибок</span><strong>25 €</strong></div>
+<div class="repair-item"><span class="repair-index">04</span><span class="repair-name" data-i18n="repair.item4">Сварочные работы</span><strong>40 €</strong></div>
+<div class="repair-item"><span class="repair-index">05</span><span class="repair-name" data-i18n="repair.item5">Проверка ходовой</span><strong>20 €</strong></div>
+<div class="repair-item"><span class="repair-index">06</span><span class="repair-name" data-i18n="repair.item6">Ремонт двигателя</span><strong>50 €</strong></div>
 </div>
 </div>
-<div class="price-notice"><svg><use href="#icon-info"></use></svg><div>Указанные цены являются предварительными. Окончательная стоимость определяется индивидуально и зависит от марки автомобиля, сложности и объёма работ, а также стоимости необходимых запчастей. Все цены приведены в качестве примера и уточняются перед началом обслуживания.</div><a href="#contacts">Уточнить стоимость <svg><use href="#icon-arrow"></use></svg></a></div>
+<div class="price-notice"><svg><use href="#icon-info"></use></svg><div data-i18n="prices.notice">Указанные цены являются предварительными. Окончательная стоимость определяется индивидуально и зависит от марки автомобиля, сложности и объёма работ, а также стоимости необходимых запчастей. Все цены приведены в качестве примера и уточняются перед началом обслуживания.</div><a href="#booking"><span data-i18n="prices.inquire">Уточнить стоимость</span><svg><use href="#icon-arrow"></use></svg></a></div>
 </div>
 </section>
 <section aria-labelledby="parking-title" class="section parking-section" id="parking">
 <div class="shell parking-layout">
-<div class="parking-intro"><div class="section-kicker">03 / ИНФОРМАЦИЯ</div><h2 id="parking-title">СТОЯНКА<br/><em>ПОСЛЕ РЕМОНТА</em></h2><p>Автомобиль может оставаться на территории сервиса после завершения работ. Срок стоянки исчисляется с момента уведомления клиента о готовности автомобиля.</p><a class="text-link" href="#contacts">Связаться с сервисом <svg><use href="#icon-arrow"></use></svg></a></div>
-<div class="parking-panel"><div class="parking-panel-head"><div class="parking-icon"><svg><use href="#icon-clock"></use></svg></div><span>УСЛОВИЯ СТОЯНКИ</span></div><div class="parking-row"><div><b>Первые 3 дня</b><span>С момента уведомления о готовности</span></div><strong>БЕСПЛАТНО</strong></div><div class="parking-row"><div><b>Начиная с 4-го дня</b><span>За каждые сутки стоянки</span></div><strong>25 € <small>/ сутки</small></strong></div><div class="parking-fineprint">Срок отсчитывается с момента уведомления клиента, а не с даты начала ремонта.</div></div>
+<div class="parking-intro"><div class="section-kicker" data-i18n="parking.kicker">03 / ИНФОРМАЦИЯ</div><h2 data-i18n-html="parking.title" id="parking-title">СТОЯНКА<br/><em>ПОСЛЕ РЕМОНТА</em></h2><p data-i18n="parking.intro">Автомобиль может оставаться на территории сервиса после завершения работ. Срок стоянки исчисляется с момента уведомления клиента о готовности автомобиля.</p><a class="text-link" href="#contacts"><span data-i18n="parking.contact">Связаться с сервисом</span><svg><use href="#icon-arrow"></use></svg></a></div>
+<div class="parking-panel"><div class="parking-panel-head"><div class="parking-icon"><svg><use href="#icon-clock"></use></svg></div><span data-i18n="parking.terms">УСЛОВИЯ СТОЯНКИ</span></div><div class="parking-row"><div><b data-i18n="parking.first">Первые 3 дня</b><span data-i18n="parking.firstnote">С момента уведомления о готовности</span></div><strong data-i18n="parking.free">БЕСПЛАТНО</strong></div><div class="parking-row"><div><b data-i18n="parking.fourth">Начиная с 4-го дня</b><span data-i18n="parking.fourthnote">За каждые сутки стоянки</span></div><strong data-i18n-html="parking.rate">25 € <small>/ сутки</small></strong></div><div class="parking-fineprint" data-i18n="parking.note">Срок отсчитывается с момента уведомления клиента, а не с даты начала ремонта.</div></div>
 </div>
 </section>
-<section aria-labelledby="contacts-title" class="contacts-section" id="contacts"><div class="shell"><div class="contact-panel"><div class="contact-main"><div class="section-kicker">04 / КОНТАКТЫ</div><h2 id="contacts-title">ДВИЖЕНИЕ<br/><em>БЕЗ ЗАБОТ</em></h2><p>Нужна диагностика, ремонт или консультация? Позвоните нам — обсудим задачу и подберём удобное время.</p><a class="contact-number" href="tel:+37257770099">+372 5777 0099</a><div class="contact-actions"><a class="btn btn-red" href="tel:+37257770099"><svg><use href="#icon-phone"></use></svg> Позвонить</a><a class="btn btn-ghost" href="https://www.instagram.com/han.motors.eu/" rel="noopener noreferrer" target="_blank"><svg><use href="#icon-instagram"></use></svg> Instagram</a></div></div><div class="contact-aside"><span class="aside-label">ЖДЁМ ВАС В ТАЛЛИННЕ</span><div class="location-address"><h3>Heli tänav<br/><em>10</em></h3><p>Tallinn, Estonia</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Heli+tn+10%2C+Tallinn%2C+Estonia" rel="noopener noreferrer" target="_blank">Построить маршрут <svg><use href="#icon-arrow"></use></svg></a></div><div class="aside-bottom"><span>TALLINN / ESTONIA</span><svg><use href="#icon-pin"></use></svg></div></div></div></div></section>
+<section aria-labelledby="booking-title" class="section booking-section" id="booking">
+<div class="shell booking-layout">
+<div class="booking-copy">
+<div class="section-kicker" data-i18n="booking.kicker">04 / ЗАПИСЬ В СЕРВИС</div>
+<h2 data-i18n-html="booking.title" id="booking-title">ОСТАВЬТЕ <em>ЗАЯВКУ</em></h2>
+<p class="booking-lead" data-i18n="booking.intro">Опишите, что нужно сделать с автомобилем. Мы свяжемся с вами, уточним стоимость и согласуем удобное время.</p>
+<div class="booking-feature"><svg aria-hidden="true"><use href="#icon-phone"></use></svg><div><b data-i18n="booking.fallbackTitle">Предпочитаете звонок?</b><a href="tel:+37257770099">+372 5777 0099</a></div></div>
+<p class="booking-note" data-i18n="booking.notConfirmed">Отправка формы — это запрос на запись, а не подтверждённое бронирование времени.</p>
+</div>
+<div class="booking-card">
+<div class="booking-card-head"><span class="booking-overline" data-i18n="booking.formOverline">ОНЛАЙН-ЗАЯВКА</span><span class="booking-required" data-i18n="booking.required">* Обязательные поля</span></div>
+<form accept-charset="UTF-8" action="https://api.web3forms.com/submit" aria-describedby="booking-privacy-note" id="service-request-form" method="POST">
+<input name="access_key" type="hidden" value="3c4f1684-e052-4f71-ac34-42699f954dc7"/>
+<input name="subject" type="hidden" value="HANMOTORS — New service request"/>
+<input name="from_name" type="hidden" value="HANMOTORS Website"/>
+<input id="booking-language" name="language" type="hidden" value="ru"/>
+<div aria-hidden="true" class="booking-honeypot"><label for="booking-botcheck">Leave blank</label><input autocomplete="off" id="booking-botcheck" name="botcheck" tabindex="-1" type="checkbox"/></div>
+<div class="booking-fields">
+<div class="booking-field"><label data-i18n="booking.name" for="booking-name">Ваше имя *</label><input autocomplete="name" data-i18n-placeholder="booking.namePH" id="booking-name" maxlength="100" name="name" placeholder="Как к вам обращаться" required="" type="text"/></div>
+<div class="booking-field"><label data-i18n="booking.phone" for="booking-phone">Телефон *</label><input autocomplete="tel" data-i18n-placeholder="booking.phonePH" id="booking-phone" inputmode="tel" maxlength="35" name="phone" placeholder="+372 ..." required="" type="tel"/></div>
+<div class="booking-field"><label data-i18n="booking.email" for="booking-email">Email (необязательно)</label><input autocomplete="email" data-i18n-placeholder="booking.emailPH" id="booking-email" maxlength="180" name="email" placeholder="name@example.com" type="email"/></div>
+<div class="booking-field"><label data-i18n="booking.car" for="booking-vehicle">Марка и модель</label><input data-i18n-placeholder="booking.carPH" id="booking-vehicle" maxlength="110" name="vehicle" placeholder="Например, Audi A4" type="text"/></div>
+<div class="booking-field booking-full"><label data-i18n="booking.service" for="booking-service">Какая услуга нужна? *</label><select id="booking-service" name="service" required=""><option data-i18n="booking.servicePlaceholder" value="">Выберите услугу</option><option data-i18n="booking.serviceTires" value="Tire service">Шиномонтаж</option><option data-i18n="booking.serviceDiagnostics" value="Diagnostics">Диагностика</option><option data-i18n="booking.serviceSuspension" value="Suspension">Ходовая часть</option><option data-i18n="booking.serviceBrakes" value="Brakes">Тормозная система</option><option data-i18n="booking.serviceRepair" value="Engine and other repairs">Ремонт автомобиля</option><option data-i18n="booking.serviceRust" value="Anti-corrosion treatment">Антикоррозийная обработка</option><option data-i18n="booking.serviceLights" value="Headlights">Фары</option><option data-i18n="booking.serviceAddons" value="Equipment installation">Дополнительное оборудование</option><option data-i18n="booking.serviceOther" value="Other / consultation">Другое / консультация</option></select></div>
+<div class="booking-field booking-full"><label data-i18n="booking.date" for="booking-date">Желаемая дата (необязательно)</label><input id="booking-date" name="preferred_date" type="date"/></div>
+<div class="booking-field booking-full"><label data-i18n="booking.message" for="booking-message">Комментарий</label><textarea data-i18n-placeholder="booking.messagePH" id="booking-message" maxlength="2000" name="message" placeholder="Опишите проблему или ваши пожелания" rows="4"></textarea></div>
+</div>
+<label class="booking-consent"><input name="consent" required="" type="checkbox" value="yes"/><span data-i18n="booking.consent">Согласен(на) на передачу указанных данных HANMOTORS через Web3Forms для ответа на мою заявку.</span></label>
+<p class="booking-privacy" data-i18n="booking.privacy" id="booking-privacy-note">Данные формы передаются через сервис Web3Forms. Пожалуйста, не указывайте конфиденциальную информацию.</p>
+<button class="btn btn-red booking-submit" id="booking-submit" type="submit"><span data-i18n="booking.send">Отправить заявку</span><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+<div aria-live="polite" class="booking-feedback" hidden="" id="booking-feedback" role="status"></div>
+</form>
+</div>
+</div>
+</section><section aria-labelledby="contacts-title" class="contacts-section" id="contacts"><div class="shell"><div class="contact-panel"><div class="contact-main"><div class="section-kicker" data-i18n="contacts.kicker">05 / КОНТАКТЫ</div><h2 data-i18n-html="contacts.title" id="contacts-title">ДВИЖЕНИЕ<br/><em>БЕЗ ЗАБОТ</em></h2><p data-i18n="contacts.intro">Позвоните нам или оставьте заявку через форму — обсудим задачу и согласуем удобное время.</p><a class="contact-number" href="tel:+37257770099">+372 5777 0099</a><div class="contact-actions"><a class="btn btn-red" href="tel:+37257770099"><svg><use href="#icon-phone"></use></svg><span data-i18n="contacts.call">Позвонить</span></a><a class="btn btn-ghost" href="https://www.instagram.com/han.motors.eu/" rel="noopener noreferrer" target="_blank"><svg><use href="#icon-instagram"></use></svg> Instagram</a><a class="btn btn-ghost" href="#booking"><span data-i18n="contacts.formBtn">Оставить заявку</span></a></div></div><div class="contact-aside"><span class="aside-label" data-i18n="contacts.city">ЖДЁМ ВАС В ТАЛЛИННЕ</span><div class="location-address"><h3>Heli tänav<br/><em>10</em></h3><p>Tallinn, Estonia</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Heli+tn+10%2C+Tallinn%2C+Estonia" rel="noopener noreferrer" target="_blank"><span data-i18n="contacts.directions">Построить маршрут</span><svg><use href="#icon-arrow"></use></svg></a></div><div class="aside-bottom"><span>TALLINN / ESTONIA</span><svg><use href="#icon-pin"></use></svg></div></div></div></div></section>
 </main>
-<footer class="footer"><div class="shell footer-inner"><a aria-label="HANMOTORS — наверх" class="brand footer-brand" href="#home"><img alt="HANMOTORS — Your Best Choice" class="brand-logo" height="438" src="assets/img/hanmotors-logo.png" width="875"/></a><span class="footer-copy">© <span id="year">2026</span> HANMOTORS. Tallinn, Estonia.</span><a class="back-top" href="#home">Наверх ↑</a></div></footer>
+<footer class="footer"><div class="shell footer-inner"><a aria-label="HANMOTORS — наверх" class="brand footer-brand" data-i18n-aria-label="footer.brandaria" href="#home"><img alt="HANMOTORS — Your Best Choice" class="brand-logo" height="438" src="assets/img/hanmotors-logo.png" width="875"/></a><span class="footer-copy">© <span id="year">2026</span> HANMOTORS. Tallinn, Estonia.</span><a class="back-top" data-i18n="footer.back" href="#home">Наверх ↑</a></div></footer>
 </body>
 </html>

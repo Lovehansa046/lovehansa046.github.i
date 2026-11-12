@@ -28,3 +28,73 @@
 @media(max-width:850px){.brand{width:148px}.brand-logo{height:62px}.main-nav{margin-left:0}.footer-brand{width:185px}}
 @media(max-width:650px){.addons-intro{display:block;margin-top:45px}.addons-intro h3{margin-top:10px}.addons-grid{grid-template-columns:1fr}.addon-card{grid-template-columns:38% 62%;min-height:152px}.addon-photo,.addon-photo img{min-height:152px}.brand{width:147px}.footer-brand{width:170px}.footer-brand .brand-logo{height:79px}.hero-actions .btn-ghost{min-width:0}.footer-inner{gap:12px}}
 @media(max-width:420px){.brand{width:137px}.header-phone{margin-left:auto}.addon-copy h4{font-size:20px}.addon-copy p{font-size:11px}.addon-copy{padding:15px 13px}.addon-photo,.addon-photo img{min-height:170px}.footer-brand{transform:none}}
+
+
+/* Language selector: visible on desktop and mobile */
+.lang-switch{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid #3b3f47;border-radius:6px;background:#171a20;flex:none;white-space:nowrap}
+.lang-btn{appearance:none;border:0;background:transparent;color:#aeb1b9;border-radius:3px;min-width:32px;height:29px;padding:0 5px;font:800 11px Manrope,Arial,sans-serif;letter-spacing:.04em;cursor:pointer;transition:background .2s,color .2s}
+.lang-btn:hover{color:#fff;background:#31343b}
+.lang-btn.is-active{background:var(--red);color:#fff}
+.lang-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(min-width:851px) and (max-width:1120px){.header-inner{gap:12px}.main-nav{gap:13px}.main-nav a{font-size:11px}.lang-btn{min-width:28px}.header-phone{font-size:12px}}
+@media(max-width:850px){.lang-switch{margin-left:auto}.header-phone{margin-left:0}.header-inner{gap:12px}}
+@media(max-width:420px){.header-inner{gap:8px}.lang-switch{padding:3px;gap:1px}.lang-btn{min-width:27px;height:27px;padding:0 3px;font-size:10px}.brand{width:126px}.header-phone svg{width:17px;height:17px}.menu-toggle{padding:8px}.menu-toggle span{width:20px}}
+/* Estonian tends to have longer unbroken compound words. */
+.lang-et .hero-copy h1{font-size:clamp(49px,5.4vw,79px)}
+@media(max-width:650px){.lang-et .hero-copy h1{font-size:clamp(38px,9vw,66px)}.lang-en .hero-copy h1{font-size:clamp(44px,10vw,67px)}}
+@media(max-width:420px){.lang-et .hero-copy h1{font-size:clamp(36px,8.1vw,50px)}.lang-et .parking-intro h2{font-size:clamp(47px,10vw,65px)}.lang-et .contact-main h2{font-size:clamp(45px,9vw,62px)}.lang-et .service-card h3{font-size:21px}.lang-et .addon-copy h4{font-size:18px}}
+/* Keep long labels and contact details inside small phone viewports. */
+@media(max-width:420px){
+  .pricing-block-head{min-width:0}
+  .heading-with-icon{gap:12px;min-width:0}
+  .heading-with-icon > div:last-child{min-width:0}
+  .pricing-block h3{font-size:24px;overflow-wrap:anywhere}
+  .contact-panel{grid-template-columns:minmax(0,1fr)}
+  .contact-main,.contact-aside{min-width:0}
+  .contact-number{font-size:clamp(24px,7vw,32px);max-width:100%}
+  .contact-main h2,.location-address h3{overflow-wrap:anywhere}
+  .lang-et .contact-main h2{font-size:clamp(36px,8.5vw,52px)}
+}
+
+/* Online booking request with Web3Forms — desktop & mobile */
+.booking-section{position:relative;background:#101216;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.booking-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(38px,6vw,100px);align-items:start}
+.booking-copy{position:sticky;top:115px;padding-top:8px}
+.booking-copy h2{font:700 clamp(49px,5.2vw,82px)/1.07 Oswald,Impact,sans-serif;letter-spacing:.01em;margin:23px 0 26px;text-transform:uppercase}
+.booking-copy h2 em{font-style:normal;color:var(--red)}
+.booking-lead{color:#b0b3bb;font-size:15px;line-height:1.9;max-width:440px}
+.booking-feature{display:flex;align-items:center;gap:14px;margin-top:35px;padding:18px 0;border-top:1px solid #36383c}
+.booking-feature svg{color:var(--red);width:29px;height:29px}
+.booking-feature b{display:block;font-size:12px;margin-bottom:6px}
+.booking-feature a{font:600 24px Oswald,Impact,sans-serif;letter-spacing:.01em}
+.booking-feature a:hover{color:var(--red2)}
+.booking-note{font-size:12px;line-height:1.8;color:#8c9099;max-width:420px}
+.booking-card{background:#1a1c22;border:1px solid #383b42;border-top:3px solid var(--red);padding:clamp(24px,3.5vw,42px);box-shadow:0 18px 60px #0003}
+.booking-card-head{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center;margin-bottom:28px}
+.booking-overline{font-size:12px;letter-spacing:.14em;font-weight:800}
+.booking-required{font-size:11px;color:#989ca5}
+.booking-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.booking-field{min-width:0;display:flex;flex-direction:column;gap:9px}
+.booking-field.booking-full{grid-column:1 / -1}
+.booking-field label{font-weight:700;font-size:11px;color:#e5e6e9;letter-spacing:.02em}
+.booking-field input,.booking-field select,.booking-field textarea{width:100%;min-width:0;border:1px solid #444952;border-radius:3px;background:#111318;color:#f5f5f5;padding:15px 14px;outline:0;font:500 13px Manrope,Arial,sans-serif;transition:border-color .18s,box-shadow .18s}
+.booking-field input::placeholder,.booking-field textarea::placeholder{color:#777d89;opacity:1}
+.booking-field select{cursor:pointer;appearance:auto}
+.booking-field select option{background:#111318;color:#fff}
+.booking-field textarea{resize:vertical;min-height:116px;line-height:1.6}
+.booking-field input:focus,.booking-field select:focus,.booking-field textarea:focus{border-color:var(--red2);box-shadow:0 0 0 3px #ed273d22}
+.booking-field input:focus-visible,.booking-field select:focus-visible,.booking-field textarea:focus-visible{outline:2px solid var(--red2);outline-offset:2px}
+.booking-consent{display:flex;gap:12px;align-items:flex-start;margin-top:23px;cursor:pointer;color:#c1c4cb;font-size:11px;line-height:1.8}
+.booking-consent input{appearance:auto;accent-color:var(--red);height:17px;width:17px;flex:none;margin:3px 0 0}
+.booking-privacy{font-size:10px;color:#8f949e;margin:10px 0 24px;line-height:1.7}
+.booking-submit{width:100%;justify-content:space-between;min-height:57px;cursor:pointer;border:0}
+.booking-submit:disabled{cursor:wait;opacity:.7}
+.booking-feedback{margin-top:17px;padding:15px 17px;font-size:12px;font-weight:600;line-height:1.7;border:1px solid #496d56;background:#1b3424;color:#d4ffdd;border-radius:3px}
+.booking-feedback.is-error{border-color:#784047;background:#361d24;color:#ffd8dd}
+.booking-feedback[hidden]{display:none}
+.booking-honeypot{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;left:-10000px!important;opacity:0!important;pointer-events:none!important}
+.contact-actions{flex-wrap:wrap}
+@media(max-width:850px){.booking-layout{gap:28px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.booking-card{padding:25px}.booking-fields{grid-template-columns:1fr;gap:15px}.booking-copy h2{font-size:clamp(42px,6vw,62px)}}
+@media(max-width:650px){.booking-layout{grid-template-columns:1fr;gap:27px}.booking-copy{position:static}.booking-copy h2{font-size:clamp(48px,10vw,68px)}.booking-lead{font-size:13px}.booking-card{padding:25px 19px}.booking-fields{grid-template-columns:1fr}.booking-field input,.booking-field select,.booking-field textarea{font-size:16px}.booking-feature{margin-top:25px}.booking-note{margin:12px 0 0}}
+/* Long Estonian labels in the existing contact & add-on sections at 421–650px */
+@media(max-width:650px){.lang-et .contact-main h2{font-size:clamp(35px,8.4vw,51px)}.lang-et .addon-copy h4{overflow-wrap:anywhere;font-size:clamp(17px,4.4vw,23px)}}

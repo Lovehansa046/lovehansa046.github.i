@@ -4,13 +4,13 @@ const nav = document.getElementById('main-nav');
 function closeMenu() {
   nav.classList.remove('is-open');
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Открыть меню');
+  menuButton.setAttribute('aria-label', window.HanmI18n ? window.HanmI18n.t('menu.label') : 'Открыть меню');
 }
 menuButton.addEventListener('click', () => {
   const open = !nav.classList.contains('is-open');
   nav.classList.toggle('is-open', open);
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  menuButton.setAttribute('aria-label', window.HanmI18n ? window.HanmI18n.t(open ? 'menu.close' : 'menu.label') : (open ? 'Закрыть меню' : 'Открыть меню'));
 });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
