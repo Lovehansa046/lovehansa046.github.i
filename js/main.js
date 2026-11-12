@@ -1,23 +1,31 @@
-(() => {
-  const header = document.getElementById('site-header');
-  const menu = document.getElementById('main-nav');
-  const toggle = document.getElementById('menu-toggle');
-  const links = [...menu.querySelectorAll('a')];
-  const closeMenu = () => { menu.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Открыть меню'); };
-  toggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-  });
-  links.forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', (event) => { if(event.key === 'Escape') closeMenu(); });
-  document.addEventListener('click', (event) => { if(!header.contains(event.target)) closeMenu(); });
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
-  onScroll();
-  window.addEventListener('scroll', onScroll, {passive:true});
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting) links.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + entry.target.id)); });
-  }, {rootMargin:'-32% 0px -58% 0px'});
-  ['home','prices','contacts'].forEach(id => observer.observe(document.getElementById(id)));
-  document.getElementById('year').textContent = new Date().getFullYear();
-})();
+'use strict';
+const menuButton = document.getElementById('menu-toggle');
+const nav = document.getElementById('main-nav');
+function closeMenu() {
+  nav.classList.remove('is-open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Открыть меню');
+}
+menuButton.addEventListener('click', () => {
+  const open = !nav.classList.contains('is-open');
+  nav.classList.toggle('is-open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+});
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+document.addEventListener('click', event => {
+  if (!nav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+});
+document.getElementById('year').textContent = String(new Date().getFullYear());
+const links = Array.from(nav.querySelectorAll('a'));
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
+    if (visible) {
+      links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + visible.target.id));
+    }
+  }, {rootMargin:'-15% 0px -65% 0px',threshold:[0,.2,.5]});
+  sections.forEach(section => observer.observe(section));
+}
